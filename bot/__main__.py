@@ -199,7 +199,7 @@ help_string_telegraph2 = f'''
 
 /{BotCommands.ExecHelpCommand}: Get help for Executor module (Only Owner)
 '''
-help_tgh = telegraph.create_page(
+helps = telegraph.create_page(
         title='Mirrorlilis Help',
         content=help_string_telegraph2,
     )["path"]
