@@ -199,7 +199,7 @@ help_string_telegraph2 = f'''
 
 /{BotCommands.ExecHelpCommand}: Get help for Executor module (Only Owner)
 '''
-helps = telegraph.create_page(
+help_tgh = telegraph.create_page(
         title='Mirrorlilis Help',
         content=help_string_telegraph2,
     )["path"]
@@ -207,9 +207,11 @@ helps = telegraph.create_page(
 helps = f'''<i><b>This button can helping you to use this bot</b></i>'''
 
 def bot_help(update, context):
-    button = ButtonMaker()
-    button.buildbutton("Other Commands", f"https://telegra.ph/{help}")
-    reply_markup = InlineKeyboardMarkup(button.build_menu(1))
+    buttons = ButtonMaker()
+    buttons.buildbutton("Main Menu", f"https://telegra.ph/{help}")
+    buttons.buildbutton("Advance cmd", f"https://telegra.ph/{help_tgh}")
+    buttons.buildbutton("Notes Feature", f"https://telegra.ph/Magneto-Python-Aria---Custom-Filename-Examples-01-20")
+    reply_markup = InlineKeyboardMarkup(buttons.build_menu(1))
     sendMarkup(help_string, context.bot, update, reply_markup)
 
 botcmds = [
