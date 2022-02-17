@@ -212,7 +212,7 @@ def bot_help(update, context):
     buttons.buildbutton("Advance cmd", f"https://telegra.ph/{help_tgh}")
     buttons.buildbutton("Notes Feature", f"https://telegra.ph/Magneto-Python-Aria---Custom-Filename-Examples-01-20")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(1))
-    sendMarkup(help_string, context.bot, update, reply_markup)
+    sendMarkup(help, context.bot, update, reply_markup)
 
 botcmds = [
 
