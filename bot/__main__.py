@@ -204,7 +204,7 @@ help_tgh = telegraph.create_page(
         content=help_string_telegraph2,
     )["path"]
 
-helps = f'''<i><b>This button can helping you to use this bot</b></i>'''
+help = f'''<i><b>This button can helping you to use this bot</b></i>'''
 
 def bot_help(update, context):
     buttons = ButtonMaker()
