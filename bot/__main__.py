@@ -54,7 +54,7 @@ def stats(update, context):
             f'<b>Memory Total:</b> {mem_t}\n'\
             f'<b>Memory Free:</b> {mem_a}\n'\
             f'<b>Memory Used:</b> {mem_u}\n'
-    update.effective_message.reply_photo(IMAGE_URL, stats, context.bot, update, parse_mode=ParseMode.HTML)
+    sendMessage.reply_photo(IMAGE_URL, stats, context.bot, update, parse_mode=ParseMode.HTML)
 
 
 def start(update, context):
@@ -66,7 +66,7 @@ def start(update, context):
 𝗧𝗵𝗶𝘀 𝗯𝗼𝘁 𝗰𝗮𝗻 𝗺𝗶𝗿𝗿𝗼𝗿 𝗮𝗹𝗹 𝘆𝗼𝘂𝗿 𝗹𝗶𝗻𝗸𝘀 𝘁𝗼 𝗚𝗼𝗼𝗴𝗹𝗲 𝗗𝗿𝗶𝘃𝗲!
 𝗧𝘆𝗽𝗲 /{BotCommands.HelpCommand} 𝘁𝗼 𝗴𝗲𝘁 𝗮 𝗹𝗶𝘀𝘁 𝗼𝗳 𝗮𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀.
 '''
-        update.effective_message.reply_photo(IMAGE_URL, start_string, context.bot, update, parse_mode=ParseMode.MARKDOWN, reply_markup=reply_markup)
+        sendMessage.reply_photo(IMAGE_URL, start_string, context.bot, update, parse_mode=ParseMode.MARKDOWN, reply_markup=reply_markup)
     else:
         sendMarkup('Not Authorized user, deploy your own mirrorlilis bot', context.bot, update, reply_markup)
 
