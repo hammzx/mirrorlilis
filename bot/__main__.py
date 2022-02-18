@@ -59,13 +59,12 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Repo", "https://www.github.com/IDONGO/mirrorlilis")
-    buttons.buildbutton("OWNER", "https://t.me/xxyznxx")
-    reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
+    buttons.buildbutton("𝐎 𝐖 𝐍 𝐄 𝐑", "https://t.me/xxyznxx")
+    reply_markup = InlineKeyboardMarkup(buttons.build_menu(1))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-This bot can mirror all your links to Google Drive!
-Type /{BotCommands.HelpCommand} to get a list of available commands
+𝗧𝗵𝗶𝘀 𝗯𝗼𝘁 𝗰𝗮𝗻 𝗺𝗶𝗿𝗿𝗼𝗿 𝗮𝗹𝗹 𝘆𝗼𝘂𝗿 𝗹𝗶𝗻𝗸𝘀 𝘁𝗼 𝗚𝗼𝗼𝗴𝗹𝗲 𝗗𝗿𝗶𝘃𝗲!
+𝗧𝘆𝗽𝗲 /{BotCommands.HelpCommand} 𝘁𝗼 𝗴𝗲𝘁 𝗮 𝗹𝗶𝘀𝘁 𝗼𝗳 𝗮𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀.
 '''
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
@@ -204,13 +203,13 @@ help_tgh = telegraph.create_page(
         content=help_string_telegraph2,
     )["path"]
 
-helps = f'''<i><b>This button can helping you to use this bot</b></i>'''
+helps = f'''<i><b>𝗧𝗵𝗶𝘀 𝗯𝘂𝘁𝘁𝗼𝗻 𝗰𝗮𝗻 𝗵𝗲𝗹𝗽𝗶𝗻𝗴 𝘆𝗼𝘂 𝘁𝗼 𝘂𝘀𝗲 𝘁𝗵𝗶𝘀 𝗯𝗼𝘁</b></i>'''
 
 def bot_help(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Main Menu", f"https://telegra.ph/{help}")
-    buttons.buildbutton("Advance cmd", f"https://telegra.ph/{help_tgh}")
-    buttons.buildbutton("Notes Feature", f"https://telegra.ph/Magneto-Python-Aria---Custom-Filename-Examples-01-20")
+    buttons.buildbutton("𝗠𝗮𝗶𝗻 𝗠𝗲𝗻𝘂", f"https://telegra.ph/{help}")
+    buttons.buildbutton("𝗔𝗱𝘃𝗮𝗻𝗰𝗲 𝗖𝗠𝗗", f"https://telegra.ph/{help_tgh}")
+    buttons.buildbutton("𝗡𝗼𝘁𝗲𝘀 𝗙𝗲𝗮𝘁𝘂𝗿𝗲", f"https://telegra.ph/Magneto-Python-Aria---Custom-Filename-Examples-01-20")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(1))
     sendMarkup(helps, context.bot, update, reply_markup)
 
