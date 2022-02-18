@@ -204,7 +204,7 @@ help_tgh = telegraph.create_page(
         content=help_string_telegraph2,
     )["path"]
 
-help = f'''<i><b>This button can helping you to use this bot</b></i>'''
+helps = f'''<i><b>This button can helping you to use this bot</b></i>'''
 
 def bot_help(update, context):
     buttons = ButtonMaker()
@@ -212,7 +212,7 @@ def bot_help(update, context):
     buttons.buildbutton("Advance cmd", f"https://telegra.ph/{help_tgh}")
     buttons.buildbutton("Notes Feature", f"https://telegra.ph/Magneto-Python-Aria---Custom-Filename-Examples-01-20")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(1))
-    sendMarkup(help, context.bot, update, reply_markup)
+    sendMarkup(helps, context.bot, update, reply_markup)
 
 botcmds = [
 
